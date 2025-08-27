@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  {{> head title="Informe mensual de rendimiento" }}
+  <body>
+    <table class="container" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center">
+          <table class="main-table" cellpadding="0" cellspacing="0">
+            {{> header title="📈 Informe mensual disponible" }}
+            <tr>
+              <td class="content">
+                <p class="text-primary">Hola <strong>{{name}}</strong>,</p>
+                <p class="subtitle">Tu informe mensual correspondiente al mes de <strong>{{month}}</strong> ya está disponible:</p>
+                <ul>
+                  <li>📈 Total de ventas: <strong>{{totalSales}}</strong></li>
+                  <li>📦 Total de compras: <strong>{{totalPurchases}}</strong></li>
+                  <li>🛒 Clientes nuevos registrados: <strong>{{newCustomers}}</strong></li>
+                  <li>📤 Productos más vendidos:
+                    <ul class="sub-list">
+                      {{#each topProducts}}
+                        <li>{{this.name}} ({{this.quantity}} unidades)</li>
+                      {{/each}}
+                    </ul>
+                  </li>
+                  <li>🏭 Inventario promedio disponible: <strong>{{avgInventory}}</strong></li>
+                  <li>💰 Rentabilidad mensual: <strong>{{profitability}}</strong></li>
+                </ul>
+                <div class="text-center" style="margin: 30px 0;">
+                  <a href="{{reportLink}}" target="_blank" class="button-primary">Ver informe completo</a>
+                </div>
+                <p class="text-secondary">Gracias por usar Ally360 para optimizar tu gestión empresarial.</p>
+                <p class="text-secondary">— El equipo de Ally360</p>
+              </td>
+            </tr>
+            {{> footer }}
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

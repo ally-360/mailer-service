@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {{> head title="Bienvenido a Ally360" }}
+</head>
+<body>
+    <table class="container" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                <table class="main-table" cellpadding="0" cellspacing="0">
+
+                    {{> header title="🎉 ¡Registro Exitoso!" }}
+
+                    <tr>
+                        <td class="content">
+                            <p class="text-primary">
+                                Hola <strong>{{email}}</strong>,
+                            </p>
+                            <p class="subtitle">
+                                ¡Gracias por registrarte en <strong>Ally360</strong>! Tu cuenta ha sido creada
+                                exitosamente.
+                            </p>
+                            <p class="subtitle">
+                                Ahora puedes comenzar a gestionar tu empresa de manera más eficiente desde nuestra
+                                plataforma en la nube.
+                            </p>
+                            <div class="text-center" style="margin: 30px 0;">
+                                <a href="https://ally360.netlify.app/login" target="_blank" class="button-primary">
+                                    Iniciar sesión
+                                </a>
+                            </div>
+                            <p class="text-secondary">
+                                Si tienes preguntas, no dudes en contactarnos. Estamos aquí para ayudarte.
+                            </p>
+                            <p class="text-secondary">— El equipo de Ally360</p>
+                        </td>
+                    </tr>
+
+                    {{> footer }}
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

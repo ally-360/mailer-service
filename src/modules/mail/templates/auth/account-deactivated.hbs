@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  {{> head title="Cuenta desactivada" }}
+  <body>
+    <table class="container" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center">
+          <table class="main-table" cellpadding="0" cellspacing="0">
+            {{> header title="🛑 Cuenta desactivada" }}
+            <tr>
+              <td class="content">
+                <p class="text-primary">Hola <strong>{{name}}</strong>,</p>
+                <p class="subtitle">Tu cuenta ha sido desactivada por decisión administrativa o solicitud voluntaria.</p>
+                <p class="subtitle">Si crees que esto es un error o deseas reactivarla, contáctanos.</p>
+                <p class="text-secondary">— El equipo de Ally360</p>
+              </td>
+            </tr>
+            {{> footer }}
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

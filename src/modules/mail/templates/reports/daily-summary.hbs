@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  {{> head title="Resumen diario de operaciones" }}
+  <body>
+    <table class="container" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center">
+          <table class="main-table" cellpadding="0" cellspacing="0">
+            {{> header title="📊 Resumen diario" }}
+            <tr>
+              <td class="content">
+                <p class="text-primary">Hola <strong>{{name}}</strong>,</p>
+                <ul>
+                  <li>📈 Ventas realizadas: <strong>{{sales}}</strong></li>
+                  <li>📦 Compras registradas: <strong>{{purchases}}</strong></li>
+                  <li>🏷️ Nuevos productos agregados: <strong>{{newProducts}}</strong></li>
+                  <li>📊 Movimiento de inventario: <strong>{{stockMovements}}</strong></li>
+                  <li>🔔 Productos con stock bajo:
+                    <ul class="sub-list">
+                      {{#each lowStockProducts}}
+                        <li>{{this}}</li>
+                      {{/each}}
+                    </ul>
+                  </li>
+                  <li>❌ Productos agotados:
+                    <ul class="sub-list">
+                      {{#each outOfStockProducts}}
+                        <li>{{this}}</li>
+                      {{/each}}
+                    </ul>
+                  </li>
+                  
+                  
+                  <li>🚚 Transferencias de bodega: <strong>{{transfers}}</strong></li>
+                </ul>
+                <p class="text-secondary">Consulta más detalles en tu panel de reportes.</p>
+                <p class="text-secondary">— El equipo de Ally360</p>
+              </td>
+            </tr>
+            {{> footer }}
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  {{> head title="Transferencia completada" }}
+  <body>
+    <table class="container" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center">
+          <table class="main-table" cellpadding="0" cellspacing="0">
+            {{> header title="📦 Transferencia de inventario" }}
+            <tr>
+              <td class="content">
+                <p class="text-primary">La transferencia de inventario ha sido completada.</p>
+                <p class="subtitle">Producto: <strong>{{product}}</strong></p>
+                <p class="subtitle">Desde: <strong>{{fromLocation}}</strong> → Hacia: <strong>{{toLocation}}</strong></p>
+                <p class="subtitle">Cantidad: {{quantity}}</p>
+                <p class="text-secondary">Fecha de movimiento: {{date}}</p>
+              </td>
+            </tr>
+            {{> footer }}
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
